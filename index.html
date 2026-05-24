@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -29,8 +28,6 @@
       text-decoration:none;
       color:inherit;
     }
-
-    /* NAVBAR */
 
     nav{
       position:fixed;
@@ -56,15 +53,9 @@
       list-style:none;
     }
 
-    nav ul li a{
-      transition:0.3s;
-    }
-
     nav ul li a:hover{
       color:#38bdf8;
     }
-
-    /* HERO */
 
     .hero{
       min-height:100vh;
@@ -115,21 +106,12 @@
       transform:translateY(-3px);
     }
 
-    .hero-image{
-      flex:1;
-      display:flex;
-      justify-content:center;
-      min-width:280px;
-    }
-
     .hero-image img{
       width:350px;
       border-radius:30px;
       border:4px solid #38bdf8;
       box-shadow:0 0 40px rgba(56,189,248,0.4);
     }
-
-    /* GENERAL SECTION */
 
     section{
       padding:100px 10%;
@@ -142,8 +124,6 @@
       color:#38bdf8;
     }
 
-    /* ABOUT */
-
     .about{
       max-width:900px;
       margin:auto;
@@ -152,8 +132,6 @@
       line-height:1.9;
       font-size:18px;
     }
-
-    /* SKILLS */
 
     .skills-container{
       display:grid;
@@ -165,12 +143,6 @@
       background:#1e293b;
       padding:30px;
       border-radius:20px;
-      transition:0.3s;
-    }
-
-    .skill-card:hover{
-      transform:translateY(-8px);
-      background:#273449;
     }
 
     .skill-card h3{
@@ -184,8 +156,6 @@
       color:#cbd5e1;
     }
 
-    /* PROJECTS */
-
     .projects-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -194,8 +164,6 @@
 
     .project-link{
       display:block;
-      text-decoration:none;
-      color:inherit;
     }
 
     .project-card{
@@ -203,8 +171,8 @@
       border-radius:20px;
       overflow:hidden;
       transition:0.3s;
-      height:100%;
       cursor:pointer;
+      height:100%;
     }
 
     .project-link:hover .project-card{
@@ -247,8 +215,6 @@
       font-size:14px;
     }
 
-    /* CONTACT */
-
     .contact{
       text-align:center;
     }
@@ -266,10 +232,7 @@
       border-top:1px solid #1e293b;
     }
 
-    /* MOBILE */
-
     @media(max-width:768px){
-
       nav{
         flex-direction:column;
         gap:15px;
@@ -286,230 +249,155 @@
       .hero-text h1{
         font-size:42px;
       }
-
     }
-
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<nav>
+  <h1>Jesse Puchuela</h1>
 
-  <nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <h1>Jesse Puchuela</h1>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Computer Engineering Student</h2>
 
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <h1>Building Modern Hardware & Software Solutions</h1>
 
-  </nav>
+    <p>
+      Passionate computer engineering student focused on embedded systems,
+      AI-powered applications, low-level programming, and full-stack development.
+      I enjoy solving real-world problems through innovative engineering.
+    </p>
 
-  <!-- HERO -->
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
 
-  <section class="hero">
+<section id="about">
+  <h2 class="section-title">About Me</h2>
 
-    <div class="hero-text">
+  <div class="about">
+    <p>
+      I'm a computer engineering student with interests in software development,
+      embedded systems, computer architecture, and artificial intelligence.
+      I enjoy creating projects that combine hardware and software to solve practical problems.
+      My goal is to become an innovative engineer capable of building scalable and impactful technology.
+    </p>
+  </div>
+</section>
 
-      <h2>Computer Engineering Student</h2>
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
 
-      <h1>Building Modern Hardware & Software Solutions</h1>
-
-      <p>
-        Passionate computer engineering student focused on embedded systems,
-        AI-powered applications, low-level programming, and full-stack development.
-        I enjoy solving real-world problems through innovative engineering.
-      </p>
-
-      <a href="#projects" class="btn">View Projects</a>
-
+  <div class="skills-container">
+    <div class="skill-card">
+      <h3>Programming</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Critical Thinking</li>
+      </ul>
     </div>
 
-    <div class="hero-image">
-
-      <img src="" alt="">
-
+    <div class="skill-card">
+      <h3>Tools</h3>
+      <ul>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>Git</li>
+      </ul>
     </div>
+  </div>
+</section>
 
-  </section>
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
 
-  <!-- ABOUT -->
+  <div class="projects-grid">
 
-  <section id="about">
+    <a href="virtual-shopping.html" class="project-link">
+      <div class="project-card">
+        <img src="images/Screenshot Virtual Shopping.png" alt="Virtual Shopping">
 
-    <h2 class="section-title">About Me</h2>
+        <div class="project-content">
+          <h3>Virtual Shopping</h3>
 
-    <div class="about">
+          <p>
+            A shopping simulation website that allows users to manage money,
+            purchase items, and calculate totals dynamically.
+          </p>
 
-      <p>
-        I'm a computer engineering student with interests in software development,
-        embedded systems, computer architecture, and artificial intelligence.
-        I enjoy creating projects that combine hardware and software to solve practical problems.
-        My goal is to become an innovative engineer capable of building scalable and impactful technology.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- SKILLS -->
-
-  <section id="skills">
-
-    <h2 class="section-title">Skills</h2>
-
-    <div class="skills-container">
-
-      <div class="skill-card">
-
-        <h3>Programming</h3>
-
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Critical Thinking</li>
-        </ul>
-
+          <div class="tech">
+            <span>HTML & CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
       </div>
+    </a>
 
+    <a href="todo-list.html" class="project-link">
+      <div class="project-card">
+        <img src="images/Screenshot ToDo List.png" alt="To Do List">
 
-      <div class="skill-card">
+        <div class="project-content">
+          <h3>My ToDo List</h3>
 
-        <h3>Tools</h3>
+          <p>
+            An interactive task management webpage where users can add,
+            remove, and mark tasks as completed.
+          </p>
 
-        <ul>
-          <li>GitHub</li>
-          <li>VS Code</li>
-          <li>Git</li>
-        </ul>
-
+          <div class="tech">
+            <span>HTML & CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
       </div>
+    </a>
 
-    </div>
+    <a href="pizza-order.html" class="project-link">
+      <div class="project-card">
+        <img src="images/Screenshot Pizza_Calculator.png" alt="Pizza Order">
 
-  </section>
+        <div class="project-content">
+          <h3>Pizza Order</h3>
 
-  <!-- PROJECTS -->
+          <p>
+            A pizza ordering simulator that displays item selections,
+            pricing, quantity, and order summaries.
+          </p>
 
-  <section id="projects">
-
-    <h2 class="section-title">Projects</h2>
-
-    <div class="projects-grid">
-
-      <!-- PROJECT 1 -->
-
-      <a href="https://virtual-shopping-pied.vercel.app/" target="_blank" class="project-link">
-
-        <div class="project-card">
-
-          <img src="images/Screenshot  Virtual Shopping .png">
-
-          <div class="project-content">
-
-            <h3>Virtual Shopping</h3>
-
-            <p>
-              A shopping simulation website that allows users to manage money,
-              purchase items, and calculate totals dynamically.
-            </p>
-
-            <div class="tech">
-              <span>HTML & CSS</span>
-              <span>JavaScript</span>
-            </div>
-
+          <div class="tech">
+            <span>HTML & CSS</span>
+            <span>JavaScript</span>
           </div>
-
         </div>
+      </div>
+    </a>
 
-      </a>
+  </div>
+</section>
 
-      <!-- PROJECT 2 -->
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact</h2>
 
-      <a href="https://my-to-do-list-omega-ten.vercel.app/" target="_blank" class="project-link">
+  <p>Email: jessepuchuela101@gmail.com</p>
+  <p>GitHub: github.com/jessepuchuela</p>
+  <p>LinkedIn: linkedin.com/in/jessepuchuela</p>
+</section>
 
-        <div class="project-card">
-
-          <img src="images/Screenshot ToDo List.png">
-
-          <div class="project-content">
-
-            <h3>My ToDo List</h3>
-
-            <p>
-              An interactive task management webpage where users can add,
-              remove, and mark tasks as completed.
-            </p>
-
-            <div class="tech">
-              <span>HTML & CSS</span>
-              <span>JavaScript</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </a>
-
-      <!-- PROJECT 3 -->
-
-      <a href="https://pizza-order-calculator-jet.vercel.app/" target="_blank" class="project-link">
-
-        <div class="project-card">
-
-          <img src="images/Screenshot Pizza_Calculator.png">
-
-          <div class="project-content">
-
-            <h3>Pizza Order</h3>
-
-            <p>
-              A pizza ordering simulator that displays item selections,
-              pricing, quantity, and order summaries.
-            </p>
-
-            <div class="tech">
-              <span>HTML & CSS</span>
-              <span>JavaScript</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact">
-
-    <h2 class="section-title">Contact</h2>
-
-    <p>Email: jessepuchuela101@gmail.com</p>
-    <p>GitHub: github.com/jessepuchuela</p>
-    <p>LinkedIn: linkedin.com/in/jessepuchuela</p>
-
-    <br>
-
-    <a href="#" class="btn">Download Resume</a>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-    © 2026 Jesse Puchuela | Computer Engineering Portfolio
-  </footer>
+<footer>
+  © 2026 Jesse Puchuela | Computer Engineering Portfolio
+</footer>
 
 </body>
 </html>
