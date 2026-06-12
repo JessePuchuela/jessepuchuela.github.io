@@ -2,70 +2,390 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ToDo List | Jesse Puchuela</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ToDo List App | Jesse Puchuela</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-  font-family:Poppins,sans-serif;
-  background:#0f172a;
-  color:white;
-  margin:0;
+background:#0f172a;
+color:white;
+overflow-x:hidden;
 }
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:80px 20px;
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px 10%;
+background:
+radial-gradient(circle at top,
+rgba(56,189,248,.18),
+transparent 60%);
 }
 
-h1{
-  color:#38bdf8;
+.hero-content{
+max-width:850px;
 }
 
-img{
-  width:100%;
-  border-radius:20px;
-  margin:30px 0;
+.hero h1{
+font-size:4.5rem;
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#cbd5e1;
+line-height:1.8;
+font-size:1.1rem;
+margin-bottom:30px;
+}
+
+.project-year{
+display:inline-block;
+background:#1e293b;
+padding:10px 20px;
+border-radius:30px;
+margin-bottom:25px;
+color:#38bdf8;
+font-weight:600;
 }
 
 .btn{
-  display:inline-block;
-  background:#38bdf8;
-  color:#0f172a;
-  padding:12px 24px;
-  border-radius:10px;
-  font-weight:600;
-  margin-right:12px;
+display:inline-block;
+padding:14px 30px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+margin:10px;
+transition:.3s;
 }
+
+.primary{
+background:#38bdf8;
+color:#0f172a;
+}
+
+.primary:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(56,189,248,.4);
+}
+
+.secondary{
+border:2px solid #38bdf8;
+color:#38bdf8;
+}
+
+.secondary:hover{
+background:#38bdf8;
+color:#0f172a;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+/* INFO CARDS */
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding:0 10%;
+margin-bottom:100px;
+}
+
+.info-card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+transition:.3s;
+}
+
+.info-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(56,189,248,.25);
+}
+
+.info-card h3{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+.info-card p{
+color:#cbd5e1;
+line-height:1.8;
+}
+
+.info-card a{
+color:#38bdf8;
+font-weight:600;
+}
+
+/* SCREENSHOTS */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:0 10%;
+margin-bottom:100px;
+}
+
+.gallery-card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+}
+
+.gallery-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(56,189,248,.25);
+}
+
+.gallery-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.gallery-content{
+padding:25px;
+}
+
+.gallery-content h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.gallery-content p{
+color:#cbd5e1;
+line-height:1.7;
+}
+
+/* TECH STACK */
+
+.tech{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+padding:0 10%;
+margin-bottom:100px;
+}
+
+.tech span{
+background:#1e293b;
+padding:14px 24px;
+border-radius:30px;
+color:#38bdf8;
+font-weight:600;
+transition:.3s;
+}
+
+.tech span:hover{
+background:#38bdf8;
+color:#0f172a;
+transform:translateY(-5px);
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding-bottom:100px;
+}
+
+.cta h2{
+margin-bottom:20px;
+font-size:2rem;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- HERO -->
 
-<h1>My ToDo List</h1>
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="project-year">
+📅 Year Created: 2025
+</div>
+
+<h1>📝 ToDo List App</h1>
 
 <p>
-An interactive task manager that lets users organize tasks,
-mark them complete, and remove them easily.
+A productivity-focused web application that helps users organize
+daily tasks, track progress, and improve efficiency through a
+simple and responsive interface.
 </p>
 
-<img src="images/Screenshot ToDo List.png" alt="ToDo List">
+<a href="https://my-to-do-list-omega-ten.vercel.app/" target="_blank" class="btn primary">
+🚀 Live Demo
+</a>
 
-<h2>Features</h2>
+<a href="https://github.com/JessePuchuela/My-ToDo-List" target="_blank" class="btn secondary">
+💻 GitHub
+</a>
 
-<ul>
-<li>Add tasks</li>
-<li>Delete tasks</li>
-<li>Mark tasks complete</li>
-<li>Simple responsive design</li>
-</ul>
-
-<a href="https://my-to-do-list-omega-ten.vercel.app/" target="_blank" class="btn">Live Demo</a>
-
-<a href="index.html" class="btn">← Back Home</a>
 
 </div>
+
+</section>
+
+<!-- PROJECT DETAILS -->
+
+<h2 class="section-title">Project Details</h2>
+
+<section class="info-grid">
+
+<div class="info-card">
+<h3>📌 What This Project Does</h3>
+
+<p>
+The application allows users to create, manage, complete,
+and remove tasks. It provides a clean environment for
+tracking responsibilities and staying organized.
+</p>
+
+</div>
+
+<div class="info-card">
+<h3>👨‍💻 My Role</h3>
+
+<p>
+I independently designed and developed the complete project,
+including the user interface, responsive layout,
+task management functionality, and JavaScript interactions.
+</p>
+
+</div>
+
+<div class="info-card">
+<h3>🛠 Technologies Used</h3>
+
+<p>
+HTML5 was used to structure the application,
+CSS was used to create the modern responsive design,
+and JavaScript powers the dynamic task interactions.
+</p>
+
+</div>
+
+</section>
+
+<!-- SCREENSHOTS -->
+
+<h2 class="section-title">Project Screenshots</h2>
+
+<section class="gallery">
+
+<div class="gallery-card">
+
+<img src="images/Screenshot_list.png" alt="Task Input">
+
+<div class="gallery-content">
+
+<h3>Add Tasks</h3>
+
+<p>
+Users can quickly create and organize tasks through
+a simple task input system.
+</p>
+
+</div>
+
+</div>
+
+<div class="gallery-card">
+
+<img src="images/Screenshot_checkoff.png" alt="Complete Tasks">
+
+<div class="gallery-content">
+
+<h3>Track Progress</h3>
+
+<p>
+Completed tasks can be checked off to visualize
+daily productivity and progress.
+</p>
+
+</div>
+
+</div>
+
+<div class="gallery-card">
+
+<img src="images/Screenshot_remove.png" alt="Delete Tasks">
+
+<div class="gallery-content">
+
+<h3>Remove Tasks</h3>
+
+<p>
+Users can remove completed or unnecessary tasks
+to maintain a clean workspace.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TECH STACK -->
+
+<h2 class="section-title">Built With</h2>
+
+<div class="tech">
+
+<span>HTML5</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Responsive Design</span>
+
+</div>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<a href="index.html" class="btn secondary">
+← Back Home
+</a>
+</section>
 
 </body>
 </html>
